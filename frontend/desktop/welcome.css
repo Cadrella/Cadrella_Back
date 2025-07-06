@@ -1,0 +1,33 @@
+#welcome{
+    flex: 0.2;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    margin-top: 0px;
+}
+#welcome_text{
+    font-family: "Anek Telugu", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    color: #4B4D4A;
+    flex: 0.5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#cadrella_text{
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: #C0904B;
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+}

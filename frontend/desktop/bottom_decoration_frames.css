@@ -1,0 +1,56 @@
+#frames{
+    flex: 0.45;
+    background-color: transparent;
+    display: flex;
+}
+#left_gold{
+    flex: 0.33;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#silver{
+    flex: 0.34;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#right_gold{
+    flex: 0.33;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Frame_Image_Left{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    transform: rotate(75deg);
+    z-index: 1;
+}
+.Frame_Image{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    bottom: -220px;
+}
+.Frame_Image_Right{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -214px;
+    right: -100px;
+    transform: rotate(-75deg);
+}
+#circular{
+    width: 330px;
+    height: 390px;
+}

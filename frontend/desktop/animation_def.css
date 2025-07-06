@@ -1,0 +1,100 @@
+/*Arrows*******************************************************************************************************/
+.hide_left_arrow {
+    animation: hide_left_arrow 2s forwards;
+}
+.show_left_arrow {
+    animation: show_left_arrow 2s forwards;
+}
+.hide_right_arrow {
+    animation: hide_right_arrow 2s forwards;
+}
+.show_right_arrow {
+    animation: show_right_arrow 2s forwards;
+}
+
+/*Images*******************************************************************************************************/
+.hide_left{
+    animation: hide_left 7s forwards;
+}
+.show_left{
+    animation: show_left 2s forwards;
+}
+.hide{
+    animation: hide 7s forwards;
+}
+.show{
+    animation: show 2s forwards;
+}
+.hide_right{
+    animation: hide_right 7s forwards;
+}
+.show_right{
+    animation: show_right 2s forwards;
+}
+
+/*Welcome to Cadrella********************************************************************************************/
+.hide_welcome{
+    animation: hide_welcome 1s forwards;
+}
+.show_welcome{
+    animation: show_welcome 1s forwards;
+}
+.hide_cadrella{
+    animation: hide_cadrella 1s forwards;
+}
+.show_cadrella{
+    animation: show_cadrella 1s forwards;
+}
+
+/*See or products >>> Choose catalogues***************************************************************************/
+.hide_catalogues_text{
+    animation: hide_catalogues_text 1s forwards;
+}
+.show_catalogues_text{
+    animation: show_catalogues_text 1s forwards;
+}
+
+/*Product path*****************************************************************************************************/
+.hide_product_path{
+    animation: hide_product_path 1s forwards;
+}
+.show_product_path{
+    animation: show_product_path 2s forwards;
+}
+
+/*Products*********************************************************************************************************/
+.show_card{
+    animation: show_card 2s forwards;
+}
+.hide_card{
+    animation: hide_card 2s forwards;
+}
+
+.show_product_name{
+    animation: show_product_name 4s forwards;
+}
+.hide_product_name{
+    animation: hide_product_name 0.5s forwards;
+}
+
+.show_product_price{
+    animation: show_product_price 4s forwards;
+}
+.hide_product_price{
+    animation: hide_product_price 0.5s forwards;
+}
+
+.show_product_image{
+    animation: show_product_image 4s forwards;
+}
+.hide_product_image{
+    animation: hide_product_image 0.5s forwards;
+}
+
+/*All content**********************************************************************************************************/
+.show_all_content{
+    animation: show_all_content 2s forwards;
+}
+.hide_all_content{
+    animation: hide_all_content 2s forwards;
+}

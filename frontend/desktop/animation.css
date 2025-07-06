@@ -1,0 +1,133 @@
+@keyframes hide {
+    0% { bottom: -228px; }
+    100% { bottom: -1228px; }
+}
+@keyframes show {
+    0% { bottom: -1228px; }
+    100% { bottom: -220px }
+}
+@keyframes hide_left {
+    0% { bottom: -228px; transform: rotate(75deg);}
+    25% { transform: rotate(85deg);}
+    50% { transform: rotate(110deg);}
+    100% { bottom: -1228px; transform: rotate(110deg);}
+}
+@keyframes show_left {
+    0% { bottom: -1228px; transform: rotate(110deg);}
+    25% { transform: rotate(110deg);}
+    50% { transform: rotate(85deg);}
+    100% { bottom: -200px; transform: rotate(75deg);}
+}
+@keyframes hide_right {
+    0% { bottom: -228px; transform: rotate(-75deg);}
+    25% { transform: rotate(-85deg);}
+    50% { transform: rotate(-110deg);}
+    100% { bottom: -1228px; transform: rotate(-110deg);}
+}
+    @keyframes show_right {
+    0% { bottom: -1228px; transform: rotate(-110deg);}
+    25% { transform: rotate(-110deg);}
+    50% { transform: rotate(-85deg);}
+    100% { bottom: -214px; transform: rotate(-75deg);}
+}
+    @keyframes hide_left_arrow {
+    0% { left: 0;}
+    100% { left: -320px}
+}
+@keyframes show_left_arrow {
+    0% { left: -320px;}
+    100% { left: 0;}
+}
+@keyframes hide_right_arrow {
+    0% { right: 0;}
+    100% { right: -320px}
+}
+@keyframes show_right_arrow {
+    0% { right: -320px;}
+    100% { right: 0;}
+}
+@keyframes hide_welcome {
+    0% { color: #4B4D4A;}
+    100% { color: rgba(75, 77, 74, 0);}
+}
+@keyframes hide_cadrella {
+    0% { color: #C0904B;}
+    100% { color: rgba(192, 144, 75, 0);}
+}
+@keyframes show_welcome {
+    0% { color: rgba(75, 77, 74, 0);}
+    100% { color: #4B4D4A;}
+}
+@keyframes show_cadrella {
+    0% { color: rgba(75, 77, 74, 0);}
+    100% { color: #C0904B;}
+}
+@keyframes hide_catalogues_text {
+    0% { top: 0}
+    100% { top: -200px}
+}
+@keyframes show_catalogues_text {
+    0% { top: -200px}
+    100% { top: 17.5px}
+}
+@keyframes show_card {
+    0% { background-color: transparent;}
+    100% { background-color: transparent;}
+}
+    @keyframes show_product_name {
+    0% { color: transparent;}
+    100% { color: #4B4D4A;} 
+}
+    @keyframes show_product_price {
+    0% { color: transparent;}
+    100% { color: #4B4D4A;}
+}
+    @keyframes show_product_image {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes hide_product_path {
+    0% { color: #4B4D4A;}
+    100% { color: transparent}
+}
+@keyframes show_product_path {
+    0% { color: transparent}
+    100% { color: #4B4D4A}
+}
+
+/*Products*/
+@keyframes show_card {
+    0% { background-color: transparent;}
+    100% { background-color: transparent;}
+}
+@keyframes hide_card {
+    0% { background-color: transparent;}
+    100% { background-color: transparent;}
+}
+
+@keyframes show_product_name {
+    0% { color: transparent;}
+    100% { color: #4B4D4A;}
+}
+@keyframes hide_product_name {
+    0% { color: #4B4D4A;}
+    100% { color: transparent;}
+}
+
+@keyframes show_product_price {
+    0% { color: transparent}
+    100% { color: #4B4D4A;}
+}
+@keyframes hide_product_price {
+    0% { color: #4B4D4A;}
+    100% { color: transparent;}
+}
+
+@keyframes show_product_image {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes hide_product_image {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}

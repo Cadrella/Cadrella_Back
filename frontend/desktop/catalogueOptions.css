@@ -1,0 +1,189 @@
+#field_and_catalogs{
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    /*grid-template-columns: 100%;*/
+    background-color: lightgreen;
+    /*overflow: auto;
+    overflow-x: hidden;*/
+
+    position: absolute;
+    top: 26%;
+    left: 16.1%;
+
+    border: solid;
+    border-width: 1.2px;
+    border-radius: 5px;
+    border-color: #cacaca;
+
+    box-shadow: 5px 5px 20px #4B4D4A;
+
+    z-index: 9999;
+}
+
+#fields{
+    flex: 0.2;
+    background-color: #fafafa;
+    border-bottom: solid;
+    border-width: 1.2px;
+    border-color: #cacaca;
+    
+    display: grid;
+    grid-template-columns: 100%;
+
+    overflow: auto;
+    overflow-x: hidden;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  #fields {
+    flex: 0.45;
+  }
+}
+
+#fields::-webkit-scrollbar {
+    width: 5.5px;
+    height: 5.5px;
+}
+#fields::-webkit-scrollbar-track {
+    background: transparent;
+}
+#fields::-webkit-scrollbar-thumb {
+    background: #b3b4b3; /* black thumb */
+    border-radius: 4px;
+}
+.field{
+    height: 68.5px;
+    background-color: #fafafa;
+    border-bottom: solid;
+    border-width: 1.2px;
+    border-color: #cacaca;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Anek Telugu", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #4B4D4A;
+
+    cursor: pointer;
+}
+.catalogs{
+    flex: 0.8;
+    display: grid;
+    background-color: #fafafa;
+    grid-template-columns: 50% 50%;
+    gap: 5%;
+    padding: 20px;
+    padding-right: 45px;
+
+    overflow: auto;
+    overflow-x: hidden;
+
+    border-left: solid;
+    border-width: 1.2px;
+    border-color: #cacaca;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .catalogs {
+    grid-template-columns: 100%;
+    gap: 0%;
+
+    flex: 0.55;
+    padding-right: 20px;
+  }
+}
+
+.catalogs::-webkit-scrollbar {
+    width: 5.5px;
+    height: 5.5px;
+}
+.catalogs::-webkit-scrollbar-track {
+    background: transparent;
+}
+.catalogs::-webkit-scrollbar-thumb {
+    background: #b3b4b3; /* black thumb */
+    border-radius: 4px;
+}
+.catalog{
+    display: flex;
+    /*background-color: aqua;*/
+    background-color: #fafafa;
+    height: 100px;
+
+    border: solid;
+    border-width: 1.75px;
+    border-radius: 3px;
+    border-color: rgb(192, 144, 75);
+
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .catalog {
+    flex-direction: column;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog_image {
+    flex: 0.8;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog_name {
+    flex: 0.2;
+  }
+}
+
+.catalog_image{
+    flex: 0.5;
+    /*background-color: aquamarine;*/
+    background-color: #cacaca;
+    
+    border-left: solid;
+    /*border-right: solid;*/
+    border-width: 1.2px;
+    border-radius: 3px;
+    border-left-color: transparent;
+    /*border-right-color: rgb(192, 144, 75);*/
+
+    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.catalog_name{
+    flex: 0.5;
+    /*background-color: aqua;*/
+    background-color: #fafafa;
+
+    border-right: solid;
+    border-width: 1.2px;
+    border-radius: 3px;
+    border-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #4B4D4A;
+
+    text-align: center;
+}

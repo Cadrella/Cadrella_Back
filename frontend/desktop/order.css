@@ -1,0 +1,52 @@
+#form_container_order{
+    flex: 0.7;
+    margin-left: 0px;
+    padding-left: 0px;
+
+    height: 90%;
+}
+
+/* Make .form_container_order a column flexbox on phones */
+@media (max-width: 600px) {
+  #form_container_order {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+#right_form_order{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+#left_form_order{
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#submit_order{
+    flex: 0.25;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 23px;
+}
+.submit_order_button{
+    background-color: #C0904B;
+    color: #fafafa;
+    width: 100px;
+    height: 30px;
+    border-width: 1px;
+    border-color: #c0baba;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.submit_order_button:hover{
+    background-color: #fafafa;
+    color: #40413f;
+}

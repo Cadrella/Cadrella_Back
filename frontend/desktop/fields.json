@@ -1,0 +1,22 @@
+[
+    {
+        "field_name": "Art",
+        "fields_number": 0
+    },
+    {
+        "field_name": "Personalities",
+        "fields_number": 1
+    },
+    {
+        "field_name": "Sports",
+        "fields_number": 1
+    },
+    {
+        "field_name": "Cars",
+        "fields_number": 1
+    },
+    {
+        "field_name": "Books",
+        "fields_number": 7
+    }
+]

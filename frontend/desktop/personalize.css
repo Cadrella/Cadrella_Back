@@ -1,0 +1,124 @@
+#image_holder{
+    flex: 0.20;
+    display: flex;
+    flex-direction: column;
+}
+.fill_gap{
+    flex: 0.03;
+}
+.enter_image{
+    flex: 0.17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+
+    color: #40413f;
+}
+#image_input{
+    display: none;
+}
+.entered_image{
+    flex: 0.80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: auto;
+
+}
+#form_container{
+    flex: 0.80;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* Make .form_container_order a column flexbox on phones */
+@media (max-width: 600px) {
+  #form_container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+#right_form{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+#left_form{
+    flex: 0.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.first_name_input, .last_name_input, .email_input, .phone_input, .address_input, .quantity_input{
+    border: solid;
+    border-color: #C0904B;
+    border-width: 1.4px;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 15px;
+}
+.email_input{
+    margin-left: 50px;
+}
+.address_input{
+    margin-left: 43px;
+}
+.last_name_input{
+    margin-left: 18px;
+}
+.quantity_input{
+    margin-left: 133px;
+}
+.first_name, .last_name, .email, .phone, .address, .quantity{
+    flex: 0.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #40413f;
+}
+.input_label{
+    font-family: "Borel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+.image_to_appear{
+    border: solid;
+    border-color: #C0904B;
+    border-width: 1.4px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+#submit_personalize{
+    flex: 0.25;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 41px;
+}
+.submit_personalize_button{
+    background-color: #C0904B;
+    color: #fafafa;
+    width: 100px;
+    height: 30px;
+    border-width: 1px;
+    border-color: #c0baba;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.submit_personalize_button:hover{
+    background-color: #fafafa;
+    color: #40413f;
+}
