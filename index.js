@@ -4,7 +4,7 @@ const cloudinary = require('cloudinary').v2;
 
 // Initialize Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY; // trimmed for safety
+const supabaseKey = process.env.SUPABASE_ANON_KEY; // trimmed for safety
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // JSON Response Helper
