@@ -2,6 +2,10 @@ const http = require('http');
 const { createClient } = require('@supabase/supabase-js');
 const cloudinary = require('cloudinary').v2;
 
+const http = require('http');
+const fs = require('fs');
+const path = require('path'); // ✅ Add this line
+
 // Initialize Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY; // trimmed for safety
