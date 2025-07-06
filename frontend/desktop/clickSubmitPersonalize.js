@@ -24,7 +24,7 @@ const clickOnSubmitPersonalize = async (event) => {
             formObject.image_input = base64Image;
 
             // Now send it
-            fetch('https://cadrella-back.onrender.com//personalize', {
+            fetch('https://cadrella-back.onrender.com/personalize', {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json'
