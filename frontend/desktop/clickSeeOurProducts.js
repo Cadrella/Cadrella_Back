@@ -71,20 +71,14 @@ let clickOnSeeOurProducts = () => {
         if(number == i) {
             first_row.appendChild(img);
             img.setAttribute('data-column', '1');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         else if(number == i+1) {
             second_row.appendChild(img);
             img.setAttribute('data-column', '2');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         else if(number == i+2) {
             third_row.appendChild(img);
             img.setAttribute('data-column', '3');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         /*else if(number == i+3) {
             fourth_row.appendChild(img);
@@ -453,20 +447,14 @@ catalogues.addEventListener('click', clickOnSeeOurProducts);
         if(number == i) {
             first_row.appendChild(img);
             img.setAttribute('data-column', '1');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         else if(number == i+1) {
             second_row.appendChild(img);
             img.setAttribute('data-column', '2');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         else if(number == i+2) {
             third_row.appendChild(img);
             img.setAttribute('data-column', '3');
-            img.setAttribute('loading', 'lazy');
-            img.setAttribute('alt', product.product_name);
         }
         /*else if(number == i+3) {
             fourth_row.appendChild(img);
