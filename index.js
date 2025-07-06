@@ -5,6 +5,24 @@ const cloudinary = require('cloudinary').v2;
 const fs = require('fs');
 const path = require('path'); // ✅ Add this line
 
+const mimeTypes = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'application/javascript',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.svg': 'image/svg+xml',
+  '.ico': 'image/x-icon',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.otf': 'font/otf',
+  '.json': 'application/json',
+  '.txt': 'text/plain'
+};
+
+
 // Initialize Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY; // trimmed for safety
@@ -67,25 +85,50 @@ const server = http.createServer((req, res) => {
     }
 
     if (req.method === 'GET') {
+
+          const userAgent = req.headers['user-agent'] || '';
+          const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
+        
+          // Serve static files
+          const ext = path.extname(req.url);
+          if (ext) {
+            const baseDir = isMobileDevice
+              ? path.join(__dirname, 'frontend/mobile')
+              : path.join(__dirname, 'frontend/desktop');
+        
+            const filePath = path.join(baseDir, req.url);
+        
+            fs.exists(filePath, (exists) => {
+              if (exists) {
+                const contentType = mimeTypes[ext.toLowerCase()] || 'application/octet-stream';
+                res.writeHead(200, { 'Content-Type': contentType });
+                fs.createReadStream(filePath).pipe(res);
+              } else {
+                res.writeHead(404, { 'Content-Type': 'text/plain' });
+                res.end('File Not Found');
+              }
+            });
+        
+            return; // important: avoid running the switch(req.url) block
+          }
+        
         switch (req.url) {
             case '/': {
-                const userAgent = req.headers['user-agent'] || '';
-                const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
-
-                const filePath = isMobileDevice
-                    ? path.join(__dirname, 'frontend/mobile/index.html')
-                    : path.join(__dirname, 'frontend/desktop/index.html');
-
-                fs.readFile(filePath, (err, data) => {
-                    if (err) {
-                    res.writeHead(500);
-                    res.end('Internal Server Error');
-                    return;
-                    }
-
-                    res.writeHead(200, { 'Content-Type': 'text/html' });
-                    res.end(data);
-                });
+                const indexPath = isMobileDevice
+                ? path.join(__dirname, 'frontend/mobile/index.html')
+                : path.join(__dirname, 'frontend/desktop/index.html');
+        
+              fs.readFile(indexPath, (err, data) => {
+                if (err) {
+                  res.writeHead(500);
+                  res.end('Internal Server Error');
+                  return;
+                }
+        
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.end(data);
+              });
+              break;
             }
 
             case '/fields': {
