@@ -22,7 +22,7 @@ let clickOnSubmitOrder = async (event) => {
     console.log("This is the ordering form data", formObject);
 
     // Now send it
-    fetch('https://cadrella-back.onrender.com//order', {
+    fetch('https://cadrella-back.onrender.com/order', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
