@@ -2,7 +2,7 @@ let fields_data;
 let catalogs_data;
 let products_data;
 
-fetch('http://localhost:3000/fields')
+fetch('https://cadrella-back.onrender.com//fields')
     .then(response => response.json())
     .then(data => {
         setTimeout(() => {
@@ -16,7 +16,7 @@ fetch('http://localhost:3000/fields')
     });
 
 
-fetch('http://localhost:3000/catalogs')
+fetch('https://cadrella-back.onrender.com//catalogs')
     .then(response => response.json())
     .then(data => {
         setTimeout(() => {
@@ -29,7 +29,7 @@ fetch('http://localhost:3000/catalogs')
     });
 
 
-fetch('http://localhost:3000/products')
+fetch('https://cadrella-back.onrender.com//products')
     .then(response => response.json())
     .then(data => {
         setTimeout(() => {
