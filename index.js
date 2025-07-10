@@ -3,6 +3,7 @@ const { createClient } = require('@supabase/supabase-js');
 const cloudinary = require('cloudinary').v2;
 
 const path = require('path');
+const fs = require('fs');
 
 // Initialize Supabase
 const supabaseUrl = process.env.SUPABASE_URL;
