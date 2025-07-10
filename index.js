@@ -116,9 +116,45 @@ const server = http.createServer((req, res) => {
                 break;
             }
 
-            default:
-                res.writeHead(404, { 'Content-Type': 'text/plain' });
-                res.end('Not Found');
+            default: {
+              const userAgent = req.headers['user-agent'] || '';
+              const isMobileDevice = /mobile|android|iphone|ipad|phone/i.test(userAgent);
+            
+              // Determine base folder
+              const baseFolder = isMobileDevice
+                ? path.join(__dirname, 'frontend/mobile')
+                : path.join(__dirname, 'frontend/desktop');
+            
+              // Normalize URL path
+              const filePath = path.join(baseFolder, req.url);
+            
+              // Simple MIME type detection
+              const ext = path.extname(filePath).toLowerCase();
+              const mimeTypes = {
+                '.html': 'text/html',
+                '.css': 'text/css',
+                '.js': 'application/javascript',
+                '.png': 'image/png',
+                '.jpg': 'image/jpeg',
+                '.jpeg': 'image/jpeg',
+                '.svg': 'image/svg+xml',
+                '.ico': 'image/x-icon'
+              };
+              const contentType = mimeTypes[ext] || 'application/octet-stream';
+            
+              fs.readFile(filePath, (err, data) => {
+                if (err) {
+                  res.writeHead(404, { 'Content-Type': 'text/plain' });
+                  res.end('Not Found');
+                } else {
+                  res.writeHead(200, { 'Content-Type': contentType });
+                  res.end(data);
+                }
+              });
+            
+              break;
+            }
+
         }
     }
 
