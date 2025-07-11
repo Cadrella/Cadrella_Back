@@ -1,5 +1,5 @@
 function createFields() {
-    fetch('http://localhost:3000/fields')
+    fetch('https://cadrella-back.onrender.com/fields')
     .then(response => response.json())
     .then(data => {
         setTimeout(() => {
