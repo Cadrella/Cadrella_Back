@@ -10,6 +10,8 @@ function createCatalogues(field_name) {
             document.querySelectorAll('#Caption').forEach(el => el.remove());
             document.querySelectorAll('#Thumbnail').forEach(el => el.remove());
 
+            history.pushState({page: 'catalogs'}, '', '/catalogs');
+
             // Reference to main content container
             const mainContent = document.getElementById('main_content');
 
