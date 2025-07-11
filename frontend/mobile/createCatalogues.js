@@ -1,5 +1,5 @@
 function createCatalogues(field_name) {
-    fetch('http://localhost:3000/catalogs')
+    fetch('https://cadrella-back.onrender.com/catalogs')
     .then(response => response.json())
     .then(data => {
         setTimeout(() => {
