@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <title>Document</title>
     <style>
         body {
@@ -62,12 +63,14 @@
 
             display: flex;
             flex-direction: column;
+
+            cursor: pointer;
         }
         .image_section {
             flex: 0.8;
             overflow: hidden;
             border: solid;
-            border-color: #f0f0f0;
+            border-color: #aba8a8;
             border-width: 1px;
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
@@ -97,7 +100,7 @@
             width: 100%;
             border-bottom: solid;
             border-width: 1px;
-            border-color: #f0f0f0;
+            border-color: #aba8a8;
         }
         .thumbnail_image {
             width: 100%;
@@ -105,7 +108,7 @@
         }
         #Caption {
             width: 100%;
-            height: 100px;
+            height: 110px;
             background-color: #efecec;
 
             display: flex;
@@ -115,6 +118,10 @@
             font-size: 35px;
             font-weight: bold;
             color: #25355b;
+
+            text-align: center;
+
+            font-family: "Sofia", sans-serif;
         }
         #collections {
             width: 100%;
@@ -140,7 +147,7 @@
             <p id="logo_text">Cadrella</p>
         </div>-->
         <div>
-            <img src="Logo.png" alt="Logo" style="width: 120px; height: auto;">
+            <img src="logo.png" alt="Logo" style="width: 120px; height: auto;">
     </header>
 
     <section id="Caption">
@@ -156,7 +163,7 @@
     </section>
     
     <section id="main_content">
-        <section class="field">
+        <!--<section class="field">
             <section class="image_section">
                 <img src="Frame.png" class="field_image" alt="Field Image">
             </section>
@@ -181,8 +188,11 @@
             <section class="field_name_section">
                 <p class="field_name">Islamique &nbsp; &rarr;</p>
             </section>
-        </section>
+        </section>-->
     </section>
     <!--<h1>You're conncetd with a mobile. HIHI</h1>-->
 </body>
+
+<script src="createField.js"></script>
+<script src="createCatalogues.js"></script>
 </html>
